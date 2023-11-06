@@ -14,8 +14,8 @@ total_votes = 0
 with open(election_csv) as csvfile:
     csv_reader = csv.reader(csvfile, delimiter=",")
     
-    #skip header
-    next(csv_reader, None)
+    #save header
+    header = next(csv_reader)
 
     # Read through each row of data after the header
     for row in csv_reader:
